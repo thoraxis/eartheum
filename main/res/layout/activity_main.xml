@@ -1,0 +1,78 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:id="@+id/container"
+    android:background="#010001">
+
+    <FrameLayout
+        android:id="@+id/camera_preview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        >
+
+
+    </FrameLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/scrollView"
+        android:layout_gravity="left|top"
+        android:layout_above="@+id/button_add">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView"
+            android:layout_gravity="left|top"
+            android:textColor="#ffffff"
+            android:padding="8dp"
+            android:textSize="32px"
+            android:capitalize="sentences"
+            android:autoText="false"
+            android:autoLink="phone|email|map|web|all" />
+    </ScrollView>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:id="@+id/editText"
+        android:layout_gravity="left|top"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentLeft="true"
+        android:layout_above="@+id/button_add"
+        android:textColor="#ffffff"
+        android:visibility="invisible"
+        android:layout_alignParentTop="true"
+        android:textAlignment="viewStart"
+        android:padding="8dp"
+        android:capitalize="sentences" />
+
+    <Button
+        android:id="@+id/button_add"
+        android:text="Add Info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|bottom"
+        android:layout_margin="0dp"
+        android:textColor="#ffffff"
+        android:onClick="addInfo"
+        android:layout_above="@+id/button_capture" />
+
+    <Button
+        android:id="@+id/button_capture"
+        android:text="Get Info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_margin="0dp"
+        android:textColor="#ffffff"
+        android:onClick="getInfo"
+        android:layout_alignBottom="@+id/camera_preview" />
+
+
+</RelativeLayout>
+
